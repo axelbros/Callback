@@ -8,14 +8,13 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class CallbackTest {
     @Test
-    void shouldSumbitRequest(){
-        open("http://localhost:9999");
+    void shouldSubmitRequest() {
+        open("http://localhost:7777");
         SelenideElement form = $(".form");
-        form.$("[data-test-id=name]").setValue("Александр Иванков");
-        form.$("[data-test-id=phone]").setValue("+78685454954");
+        form.$("[data-test-id=name] input").setValue("Иванов Иван");
+        form.$("[data-test-id=phone] input").setValue("+79999999999");
         form.$("[data-test-id=agreement]").click();
-        form.$("[role=button]").click();
-        $(".allert-succes").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
-
+        form.$(".button").click();
+        $(".Success_successBlock__2L3Cw").shouldHave(exactText("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время."));
     }
 }
