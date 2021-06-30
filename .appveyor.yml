@@ -3,11 +3,10 @@ image: Ubuntu
 branches:
   only:
     - master
-
+    -
 build: off
 
 install:
-
   - ps: $App = Start-Process -FilePath java -ArgumentList "-jar ./artifacts/app-order.jar" -PassThru
 
 build_script:
