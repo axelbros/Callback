@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/itkdth1s35vlvgsp?svg=true)](https://ci.appveyor.com/project/axelbros/callback)
