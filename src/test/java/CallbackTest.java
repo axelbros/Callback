@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class CallbackTest {
     @Test
     void shouldSumbitRequest(){
-        open("http://http://localhost:9999");
+        open("http://localhost:9999");
         SelenideElement form = $(".form");
         form.$("[data-test-id=name]").setValue("Александр Иванков");
         form.$("[data-test-id=phone]").setValue("+78685454954");
